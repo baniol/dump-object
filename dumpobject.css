@@ -1,0 +1,133 @@
+.dump-object {
+  position: fixed;
+  top:30px;
+  bottom: 30px;
+  left: 30px;
+  right: 30px;
+  border: 1px solid #bbb;
+  box-shadow: 0 0 20px #bbb;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+  font-family: Arial;
+}
+
+.dump-object .popup-close {
+  position: absolute;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+  height: 24px;
+  width: 24px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAADmUlEQVR42sVVS0hbURCN+Zh/ooLRKP5irUZJnhqLbao1aKVJTBRFYxS/iFpFhRRcuBB0VbtXEIQuXLqIil2V7kRLcSW0xS6CWxe6kK5MWm9nxvfklaf104UXhnczd+6Ze8+ZuZE9+Jibm5PDRwmmAJPzpvB4PEpau+9gjCUR8M1DSbF3GR0dHQphvrW1pfM3N3tbW1sXuPLy92j+QOBtKBQKbm5uGsV77gze2dk5WOlyHWRlZzNzSgrT6vVMZzAwvdHICmw25nA6f3SEwyO3TUIBPD2atra21YzMTAY/0RJylSqOJgNTqtUJ8P3CtZzcXNbe3r4Ge7T/TCLmMRwOr+YXFCBwHJcAkCEgnJ5uoVKrCdxgMlFMptXKgLI1CZZ4CIIODQ11w6no1CazmUGyvZaWli/CTbQ63RnOA4FArLun56MlI4OSW7OyGFIqwpKUImZWPq+p2ccpGgDvgy85FouZQdhLfyAYPI5GoxzuaQoEohqdjvxut/vg6OhIL8YUBvE2PDxcl5uXh8HnMqWSlVdUHA4MDDhwbWdnx9LY2PjV5/Odrq+vu9BnMpnSbIWF28YLqn6j8N19fS9xDftEkqC+vn5SuDJwTTxzHHcyNTVFgIuLi3krKytOnNf6fOkAjrciTRTJyQnUhKvkIgKmJMGT6up5vC5WiVqrZXqDgUS2l5aezszMPBOCx8fHc/Ly87/jms6gj/MUxVGz9lBomQ+TUuRyuWaxSqAcEzr4Jms0lMDn958uLy9fJlhaWsp55fNhAgI2GI30Raq6urquTwBCvs7MsgoUJRCgqanpBDnnG68Q6RI08fv9F8LL5UhnIt1iYYDx5lqKRkZGKqFECZg/+eHGxgaJDE+FBda+Qff+HBsboyS7u7tpXq93m++T80dFRWxycrJWIrK4pBoaGrZF5YhlqrbZbGaokH1ZUhL5neXO49HRUY4vjKgpJYX8T93uz9hkIkxpo01PT3vhJLQBhYbS3CstK6NGAzFR/Dgl4bhYXV3dR3NqKsU+Li5mExMTzVc1moSqwcHBeQDFjWRQHQQOhl+aq4AWlUZD63ig/v7+dyJxJU+FhCpouvnikhIhCTWSTKFIoOFc8JfY7QxiF67CuDEJiFlbVVX1AYRNwFtDTzbynWG1IiVnLzyeT0jprcHFgeIym52ddcDz3VvmcETsdnvEHwz2RiIRh2iL/F5/n1RqNw+MSfqv/2b+T+QvQx+d+qHHH5SifAwUc0QtAAAAAElFTkSuQmCC);
+}
+
+.dump-object .object-header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  height: 50px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dump-object .object-header form {
+  position: absolute;
+  right: 180px;
+  top:10px;
+}
+
+.dump-object .object-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.dump-object .popup-close {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+
+.dump-object .toggle-all {
+  position: absolute;
+  top: 19px;
+  left: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dump-object .content {
+  position: absolute;
+  overflow: auto;
+  top: 50px;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+}
+
+.dump-object ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.dump-object li .key {
+  color: green;
+}
+
+.dump-object li .value.string {
+  color: red;
+}
+
+.dump-object li .value.number {
+  color: orange;
+}
+
+.dump-object li .li-num {
+  background-color: red;
+  padding: 2px 4px 2px;
+  color: #fff;
+  height: 8px;
+  width: 8px;
+  /*display: inline-block;*/
+}
+
+.dump-object li.array {
+  border: 1px solid #c4c4c4;
+  overflow: auto;
+  margin-top: 5px;
+  padding: 5px 0;
+}
+
+.dump-object li.array > ul {
+  display: none;
+}
+
+.dump-object li.array > ul > li:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.dump-object li.array > ul > li:nth-child(even) {
+  background-color: #eee;
+}
+
+.dump-object li.array > span {
+  background-color: #aaa;
+  color: blue;
+}
+
+.dump-object li.array > span:after {
+  content: '▶';
+  /*display: inline-block;*/
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.dump-object li.array.opened > span:after {
+  content: '▼';
+
+}
+
+.dump-object ul li.hover {
+  background-color: #c4c4c4 !important;
+}
